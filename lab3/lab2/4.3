@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Main {
+   public static boolean isVoc(char litera){
+       if(litera=='a'|| litera=='e' || litera=='i' || litera=='o' || litera=='u'){
+           return true;
+       }
+       return false;
+   }
+    public static void main(String[] args) {
+       String sir;
+       int cnt_voc=0,cnt_cons=0;
+       Scanner in = new Scanner(System.in);
+       sir = in.nextLine();
+
+       //a
+        for(int i=0;i<sir.length();i++){
+            if(isVoc(sir.charAt(i)))cnt_voc++;
+            else cnt_cons++;
+        }
+        System.out.println("vocale: " + cnt_voc+" consoane: "+cnt_cons);
+
+        //b
+        char voc=in.nextLine().charAt(0);
+        System.out.println("vocala " + voc + " se afla la indicii: ");
+        for(int i=0;i<sir.length();i++){
+            if(sir.charAt(i)==voc){System.out.print(i + " ");}
+        }
+    }
+}
