@@ -29,10 +29,10 @@
 
             Complex scalar = new Complex(2, 0);
             MatriceComplexe M3 = suma.InmultireScalar(scalar);
-            System.out.println("Matricea 3:\n" + M3.toString());
+            System.out.println("Inmultire cu scalar:\n" + M3.toString());
 
             MatriceComplexe produs = m1.InmultireMatrice(m2);
-            System.out.println(produs.toString());
+            System.out.println("Inmultire matrici:\n" + produs.toString());
 
         }
     }
