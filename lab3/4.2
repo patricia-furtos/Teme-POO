@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class Main {
+   
+    public static void main(String[] args) {
+        short pers_impachetata=0;
+        int varsta=25,sex=1,inaltime=180;
+        //impachetare
+        pers_impachetata = (short)((((varsta<<1)| sex)<<8)|inaltime);
+        System.out.println("pers_impachetata: "+pers_impachetata);
+        //despachetare
+        inaltime = pers_impachetata & 0xff;
+        sex =  (pers_impachetata >> 8) & 1;
+        varsta = (pers_impachetata >> 9) & 0x07f;
+        System.out.println("varsta: " + varsta + " sex: "+ sex + " inaltime: " + inaltime);
+    }
+}
